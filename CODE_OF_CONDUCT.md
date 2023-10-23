@@ -47,7 +47,7 @@ Project maintainers will enforce this code of conduct. Instances of behavior tha
 
 ## Reporting Violations
 
-If you witness or experience behavior that violates this code of conduct, please contact the project maintainers at [project-team-email@example.com](mailto:rudr26@proton.me). All reports will be treated with confidentiality.
+If you witness or experience behavior that violates this code of conduct, please contact the project maintainers at [project-team](mailto:rudr26@proton.me). All reports will be treated with confidentiality.
 
 ## Attribution
 
