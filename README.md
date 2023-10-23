@@ -91,7 +91,7 @@ if you wish to contribute to our ui contact the team at rudr26@proton.me
 
 ## Contributions
 
-We welcome contributions! If you'd like to contribute to YatraZen, (CONTRIBUTING.md).
+We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](CONTRIBUTING.md).
 
 ## License
 
