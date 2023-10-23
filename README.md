@@ -83,7 +83,7 @@ Follow these steps to install and run YatraZen on your device:
 
 ## Screenshots
 
-![UI](https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/preview/500x500/-/quality/smart/-/format/auto/)
+![UI](https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/preview/500x500/-/quality/normal/-/format/auto/)
 
 ## Contribute & refer to Our UI
 [YatraZen Mobile UI](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51:643&type=design&node-id=70-1140&viewport=186,446,0.19&t=hQCOXJ0Tr5QBCrBg-1&scaling=scale-down&mode=design)
