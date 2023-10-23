@@ -1,3 +1,4 @@
+
 # YatraZen: Where Journeys Find Peace
 
 ## Overview
@@ -88,6 +89,10 @@ Follow these steps to install and run YatraZen on your device:
 [YatraZen Mobile UI](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51:643&type=design&node-id=70-1140&viewport=186,446,0.19&t=hQCOXJ0Tr5QBCrBg-1&scaling=scale-down&mode=design)
 
 if you wish to contribute to our ui contact the team at rudr26@proton.me
+
+## Code of Conduct
+
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to YatraZen.
 
 ## Contributions
 
