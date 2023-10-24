@@ -1,4 +1,5 @@
 
+
 # YatraZen: Where Journeys Find Peace
 
 ## Overview
@@ -70,14 +71,18 @@ Follow these steps to install and run YatraZen on your device:
 
 ### For Mobile (iOS/Android)
 
-1. Clone the repository: `git clone https://github.com/your-username/YatraZen.git`
-2. Navigate to the mobile directory: `cd YatraZen`
-3. Install dependencies: `npm install`
-4. Run the app: `npx expo start`
+ 1. Clone the repository: `git clone https://github.com/your-username/YatraZen.git`
+ 2. Navigate to the mobile directory: `cd YatraZen`
+ 3. Install dependencies: `npm install`
+ 4. Run the app: `npx expo start`
+### For those who want to work with React-Native CLI ( Android and iOS )
+Run the app using: `npx react-native start`
+ make sure you have installed react native correctly, 
+ #### refer to official [react native installation guide](https://reactnative.dev/docs/next/environment-setup)
 
 ### For Web
 
-1. Navigate to the web directory: `cd YatraZen/web`
+1. Navigate to the web directory: `cd YatraZen`
 2. Install dependencies: `npm install`
 3. Run the app: `npm run dev`
 
@@ -108,9 +113,6 @@ Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to Y
 We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](CONTRIBUTING.md).
 
 ## License
-
-# YatraZen
-
 YatraZen is licensed under the MIT License. **[MIT License](https://github.com/LazyCoder26/v3/blob/main/LICENSE.md)**
 
 ---
