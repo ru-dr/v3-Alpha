@@ -1,5 +1,3 @@
-
-
 # YatraZen: Where Journeys Find Peace
 
 ## Overview
@@ -68,6 +66,7 @@ YatraZen addresses the negative impact of incidents on tourists by ensuring safe
 ## Getting Started
 
 Follow these steps to install and run YatraZen on your device:
+If you find any kind of difficulties while setuping the environment or app installation open up the disscusion or contact the team at rudr26@proton.me
 
 ### For Mobile (iOS/Android)
 
