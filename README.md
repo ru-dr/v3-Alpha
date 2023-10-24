@@ -90,6 +90,16 @@ Follow these steps to install and run YatraZen on your device:
 
 if you wish to contribute to our ui contact the team at rudr26@proton.me
 
+# Distribution and Copying Notice
+
+**Important:** Without the explicit permission of the owner, any form of distribution or copying of this software is strictly prohibited. Unauthorized distribution or copying may result in liability and consequences.
+
+For inquiries regarding distribution or copying permissions, please contact [Team Email](mail to: rudr26@proton.me).
+
+Thank you for respecting the terms and conditions.
+
+[YatraZen v3]
+
 ## Code of Conduct
 
 Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to YatraZen.
