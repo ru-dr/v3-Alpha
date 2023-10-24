@@ -102,6 +102,6 @@ We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](
 
 # YatraZen
 
-YatraZen is licensed under the MIT License. **[MIT License](LICENCE)**
+YatraZen is licensed under the MIT License. **[MIT License](LICENCE.md)**
 
 ---
