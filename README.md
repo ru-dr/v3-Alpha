@@ -94,7 +94,7 @@ if you wish to contribute to our ui contact the team at rudr26@proton.me
 
 **Important:** Without the explicit permission of the owner, any form of distribution or copying of this software is strictly prohibited. Unauthorized distribution or copying may result in liability and consequences.
 
-For inquiries regarding distribution or copying permissions, please contact [Team-Email](rudr26@proton.me).
+For inquiries regarding distribution or copying permissions, please contact our team at rudr26@proton.me.
 
 Thank you for respecting the terms and conditions.
 
