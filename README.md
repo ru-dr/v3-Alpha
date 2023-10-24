@@ -100,7 +100,8 @@ We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](
 
 ## License
 
-YatraZen is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivs License (CC BY-NC-ND 4.0)**.
+# YatraZen
 
+YatraZen is licensed under the MIT License. **[MIT License](LICENCE)**
 
 ---
