@@ -77,6 +77,7 @@ Follow these steps to install and run YatraZen on your device:
  4. Run the app: `npx expo start`
 ### For those who want to work with React-Native CLI ( Android and iOS )
 Run the app using: `npx react-native start`
+
  make sure you have installed react native correctly, 
  #### refer to official [react native installation guide](https://reactnative.dev/docs/next/environment-setup)
 
