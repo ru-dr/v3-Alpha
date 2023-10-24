@@ -5,7 +5,7 @@
 
 YatraZen is an all-in-one solution designed to enhance the travel experience, providing essential features for tourists visiting different regions. Seamlessly bridging language gaps, ensuring safety, and offering convenience, YatraZen aims to make every journey a peaceful and enjoyable experience.
 
-![YatraZen Logo](https://ucarecdn.com/a7cbce5c-895a-4cea-9a8f-9fcbd10351a0/-/scale_crop/1922x444/-/format/auto/-/quality/normal/)
+![YatraZen Logo](https://ucarecdn.com/b71f779c-9894-48cf-9383-6ce0256d5956/-/scale_crop/385x91/-/format/auto/-/quality/smart/-/rasterize/)
 
 ## Key Features
 
