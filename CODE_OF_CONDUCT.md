@@ -54,7 +54,3 @@ If you witness or experience behavior that violates this code of conduct, please
 This code of conduct is inspired by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html) and adapted to suit the specific needs of YatraZen.
 
 By participating in YatraZen, you agree to abide by this code of conduct.
-
---- 
-
-Feel free to customize this code of conduct based on your specific project details and needs.
