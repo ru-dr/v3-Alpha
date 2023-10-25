@@ -97,7 +97,7 @@ Run the app using: `npx react-native start`
 if you wish to contribute to our ui contact the team at rudr26@proton.me
 
 ## Distribution and Copying Notice
-**Important:** Without the explicit permission of the owner, any form of distribution or copying of this software is strictly prohibited. Unauthorized distribution or copying may result in liability and consequences.
+## **Important:** Without the explicit permission of the owner, any form of distribution or copying of this software is strictly prohibited. Unauthorized distribution or copying may result in liability and consequences.
 
 For inquiries regarding distribution or copying permissions, please contact our team at rudr26@proton.me.
 
