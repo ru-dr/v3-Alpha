@@ -94,6 +94,7 @@ Run the app using: `npx react-native start`
 ## Contribute & refer to Our UI
 [YatraZen Mobile UI](https://www.figma.com/file/kpnBON1tJlr1kXGh9w3j4v/Untitled?type=design&node-id=51-643&mode=design)
 
+[UI Prototype](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51%3A643&node-id=70-1140&type=design)
 if you wish to contribute to our ui contact the team at rudr26@proton.me
 
 ## Distribution and Copying Notice
