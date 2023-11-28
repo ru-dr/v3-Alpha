@@ -4,7 +4,7 @@
 
 YatraZen is an all-in-one solution designed to enhance the travel experience, providing essential features for tourists visiting different regions. Seamlessly bridging language gaps, ensuring safety, and offering convenience, YatraZen aims to make every journey a peaceful and enjoyable experience.
 
-![YatraZen Logo](https://ucarecdn.com/b71f779c-9894-48cf-9383-6ce0256d5956/-/scale_crop/385x91/-/format/auto/-/quality/smart/-/rasterize/)
+![YatraZen Logo](https://ucarecdn.com/b71f779c-9894-48cf-9383-6ce0256d5956/-/scale_crop/385x91/-/format/auto/-/quality/normal/-/rasterize/)
 
 ## Key Features
 
@@ -92,7 +92,9 @@ Run the app using: `npx react-native start`
 ![UI](https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/scale_crop/838x1264/-/format/auto/-/quality/best/)
 
 ## Contribute & refer to Our UI
-[YatraZen Mobile UI](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51:643&type=design&node-id=70-1140&viewport=186,446,0.19&t=hQCOXJ0Tr5QBCrBg-1&scaling=scale-down&mode=design)
+[YatraZen Mobile UI](https://www.figma.com/file/kpnBON1tJlr1kXGh9w3j4v/Untitled?type=design&node-id=51-643&mode=design)
+
+[UI Prototype](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51%3A643&node-id=70-1140&type=design)
 
 if you wish to contribute to our ui contact the team at rudr26@proton.me
 
