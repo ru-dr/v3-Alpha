@@ -1,3 +1,4 @@
+
 # YatraZen: Where Journeys Find Peace
 
 ## Overview
@@ -17,7 +18,7 @@ Instantly connect to the nearest emergency services for urgent assistance.
 ### 3. Weather
 Make informed travel decisions based on real-time weather updates.
 
-### 4. News
+### 4. News [ powered by NewsCatcher API ](https://www.newscatcherapi.com/)
 Stay updated on local and national travel news, policies, and restrictions.
 
 ### 5. Booking
