@@ -116,6 +116,6 @@ Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to Y
 We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](CONTRIBUTING.md).
 
 ## License
-YatraZen is licensed under the GNU GPL 3.0 License. **[GNU GPL 3.0 License](https://github.com/ru-dr/v3/blob/main/LICENSE)**
+YatraZen is licensed under the GNU GPL 3.0 License. **[GNU GPL 3.0 License](LICENSE)**
 
 ---
