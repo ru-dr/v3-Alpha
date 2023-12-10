@@ -64,6 +64,6 @@ Please note that YatraZen has a [Code of Conduct](CODE_OF_CONDUCT.md). By partic
 
 ## License
 
-By contributing to YatraZen, you agree that your contributions will be licensed under the [GNU GPL 3.0 License](https://github.com/LazyCoder26/v3/blob/main/LICENSE.md).
+By contributing to YatraZen, you agree that your contributions will be licensed under the [GNU GPL 3.0 License](https://github.com/LazyCoder26/v3/blob/main/LICENSE).
 
 We appreciate your contributions and look forward to making YatraZen better together!
