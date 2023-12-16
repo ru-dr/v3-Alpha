@@ -89,7 +89,7 @@ Run the app using: `npx react-native start`
 
 ## Screenshots
 
-![UI](https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/scale_crop/838x1264/-/format/auto/-/quality/best/)
+<img src="https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/scale_crop/838x1264/-/format/auto/-/quality/best/" width="560">
 
 ## Contribute & refer to Our UI
 [YatraZen Mobile UI](https://www.figma.com/file/kpnBON1tJlr1kXGh9w3j4v/Untitled?type=design&node-id=51-643&mode=design)
