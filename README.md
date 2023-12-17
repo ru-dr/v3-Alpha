@@ -69,6 +69,7 @@ We appreciate your interest and support for YatraZen! Here are a few ways you ca
 
 ---
 
-Thank you for being a part of our 🚀 journey! 🎉 Happy travels 🧳 with YatraZen! 🌍
+Thank you for being a part of our journey!
+Happy travels with YatraZen!
 
 ---
