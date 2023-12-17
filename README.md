@@ -17,7 +17,7 @@ Instantly connect to the nearest emergency services for urgent assistance.
 ### 3. Weather
 Make informed travel decisions based on real-time weather updates.
 
-### 4. News [```powered by NewsCatcher API```](https://www.newscatcherapi.com/)
+### 4. News
 Stay updated on local and national travel news, policies, and restrictions.
 
 ### 5. Booking
@@ -41,81 +41,24 @@ Promote hospitality with the ethos of "Athithi Devo Bhava."
 - **Axios and Express (API Endpoints)**
 - **Clerk Authentication (Secure Auth)**
 
-## Use Cases
-
-YatraZen addresses the negative impact of incidents on tourists by ensuring safety and ease of travel. By promoting cultural sensitivity and sending push notifications for maintaining cleanliness, YatraZen aligns with the principles of sustainable development goals.
-
-## Dependencies / Show Stoppers
-
-### Show Stoppers
-
-1. **Indian Emergency Services API:** Connects users to local emergency services.
-2. **Promotion of Heritage Cities:** Boosts tourism by promoting historical sites.
-3. **Translation API (Google Translate):** Facilitates communication with locals.
-4. **Seamless Booking Services:** From airports/railway stations to hotels and restaurants.
-5. **Safety Assurance:** Enhancing overall tourism industry safety.
-
-### Dependencies
-
-- **BingMap APIs / GoogleMap**
-- **Translation API (Google Translate)**
-- **NewsAPI**
-- **OpenWeatherAPI**
-- **Expo GO**
-
-## Getting Started
-
-Follow these steps to install and run YatraZen on your device:
-
-If you encounter any difficulties during the setup of the environment or app installation, please open a discussion or contact the team at rudr26@proton.me
-
-### For Mobile (iOS/Android)
-
- 1. Clone the repository: `git clone https://github.com/your-username/YatraZen.git`
- 2. Navigate to the mobile directory: `cd YatraZen`
- 3. Install dependencies: `npm install`
- 4. Run the app: `npx expo start`
-### For those who want to work with React-Native CLI ( Android and iOS )
-Run the app using: `npx react-native start`
-
- make sure you have installed react native correctly, 
- #### refer to official [react native installation guide](https://reactnative.dev/docs/next/environment-setup)
-
-### For Web
-
-1. Navigate to the web directory: `cd YatraZen`
-2. Install dependencies: `npm install`
-3. Run the app: `npm run dev`
-
 ## Screenshots
 
 <img src="https://ucarecdn.com/1c53f2b7-4a42-4e6a-b4c0-ad298bbba937/-/scale_crop/838x1264/-/format/auto/-/quality/best/" width="560">
 
-## Contribute & refer to Our UI
-[YatraZen Mobile UI](https://www.figma.com/file/kpnBON1tJlr1kXGh9w3j4v/Untitled?type=design&node-id=51-643&mode=design)
+## Sponsors
 
-[UI Prototype](https://www.figma.com/proto/kpnBON1tJlr1kXGh9w3j4v/Untitled?page-id=51%3A643&node-id=70-1140&type=design)
+We extend our heartfelt gratitude to our sponsors who support the development of YatraZen:
 
-if you wish to contribute to our ui contact the team at rudr26@proton.me
+- [```NewsCatcher API```](https://www.newscatcherapi.com/) : Empowering YatraZen with up-to-date and comprehensive news coverage.
 
-## Distribution and Copying Notice
-#### **Important:** Without the explicit permission of the owner, any form of distribution or copying of this software is strictly prohibited. Unauthorized distribution or copying may result in liability and consequences.
+## How to Support YatraZen?
 
-For inquiries regarding distribution or copying permissions, please contact our team at rudr26@proton.me.
+We appreciate your interest and support for YatraZen! Here are a few ways you can contribute:
 
-Thank you for respecting the terms and conditions.
+- ⭐ **Star this project:** Show your support by giving us a star on GitHub!
+- 📣 **Spread the word:** Share YatraZen with your friends, family, and fellow travelers.
+- 🚀 **Contribute:** If you have skills in design, development, or feedback, we welcome contributions! Contact the team at rudr26@proton.me for details.
 
-[YatraZen v3]
-
-## Code of Conduct
-
-Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to YatraZen.
-
-## Contributions
-
-We welcome contributions! If you'd like to contribute to YatraZen, [Contribute](CONTRIBUTING.md).
-
-## License
-YatraZen is licensed under the GNU GPL 3.0 License. **[GNU GPL 3.0 License](LICENSE)**
+Thank you for being a part of our journey!
 
 ---
