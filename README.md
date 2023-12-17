@@ -1,4 +1,4 @@
-# YatraZen: Where Journeys Find Peac
+# YatraZen: Where Journeys Find Peace
 
 ## Overview
 
