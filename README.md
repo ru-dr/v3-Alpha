@@ -51,6 +51,10 @@ We extend our heartfelt gratitude to our sponsors who support the development of
 
 - [```NewsCatcher API```](https://www.newscatcherapi.com/) : Empowering YatraZen with up-to-date and comprehensive news coverage.
 
+We invite more sponsors to join us in this journey and contribute to the continued enhancement of YatraZen. Your support enables us to innovate and provide valuable features to travelers worldwide.
+
+If your organization is interested in becoming a sponsor, please contact us at [rudr26@proton.me](mailto:rudr26@proton.me). We look forward to collaborating with you!
+
 ## How to Support YatraZen?
 
 We appreciate your interest and support for YatraZen! Here are a few ways you can contribute:
@@ -59,6 +63,8 @@ We appreciate your interest and support for YatraZen! Here are a few ways you ca
 - 📣 **Spread the word:** Share YatraZen with your friends, family, and fellow travelers.
 - 🚀 **Contribute:** If you have skills in design, development, or feedback, we welcome contributions! Contact the team at rudr26@proton.me for details.
 
-Thank you for being a part of our journey!
+---
+
+Thank you for being a part of our journey! Happy travels with YatraZen!
 
 ---
