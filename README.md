@@ -63,6 +63,10 @@ We appreciate your interest and support for YatraZen! Here are a few ways you ca
 - 📣 **Spread the word:** Share YatraZen with your friends, family, and fellow travelers.
 - 🚀 **Contribute:** If you have skills in design, development, or feedback, we welcome contributions! Contact the team at rudr26@proton.me for details.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ru-dr/v3&type=Timeline)](https://star-history.com/#ru-dr/v3&Timeline)
+
 ---
 
 Thank you for being a part of our journey! Happy travels with YatraZen!
