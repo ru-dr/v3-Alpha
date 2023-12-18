@@ -11,6 +11,7 @@ const page = () => {
       <StatusBar style="light" backgroundColor="#000" />
       <View style={{ backgroundColor: "#000", height: screenHeight }}>
         <BackNav path={"/"} />
+        Hello
       </View>
     </SafeAreaView>
   );
