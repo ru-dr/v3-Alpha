@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, StyleSheet, Animated } from "react-native";
+import { View, Text, Dimensions, StyleSheet, Animated, Pressable } from "react-native";
 import React, { useEffect, useRef } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -15,8 +15,8 @@ import { WeatherIcon } from "./components/icons/WeatherIcon";
 import { TranslateIcon } from "./components/icons/TranslateIcon";
 import { BookingIcon } from "./components/icons/BookingIcon";
 import { HospitalIcon } from "./components/icons/HospitalIcon";
-import { useColorScheme } from 'react-native';
-
+import { useColorScheme } from "react-native";
+import { Link } from "expo-router";
 
 const screenHeight = Dimensions.get("window").height;
 const place = "India";
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Page() {
+const Page = () => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const colorScheme = useColorScheme();
 
@@ -91,6 +91,15 @@ export default function Page() {
     "Syne-SemiBold": require("./components/fonts/Syne-SemiBold.ttf"),
     "Syne-Variable": require("./components/fonts/Syne-VariableFont_wght.ttf"),
     "Syne-Medium": require("./components/fonts/Syne-Medium.ttf"),
+    "Barlow-Black": require("./components/fonts/Barlow-Black.ttf"),
+    "Barlow-Bold": require("./components/fonts/Barlow-Bold.ttf"),
+    "Barlow-ExtraBold": require("./components/fonts/Barlow-ExtraBold.ttf"),
+    "Barlow-ExtraLight": require("./components/fonts/Barlow-ExtraLight.ttf"),
+    "Barlow-Light": require("./components/fonts/Barlow-Light.ttf"),
+    "Barlow-Medium": require("./components/fonts/Barlow-Medium.ttf"),
+    "Barlow-Regular": require("./components/fonts/Barlow-Regular.ttf"),
+    "Barlow-SemiBold": require("./components/fonts/Barlow-SemiBold.ttf"),
+    "Barlow-Thin": require("./components/fonts/Barlow-Thin.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -118,7 +127,8 @@ export default function Page() {
         >
           <View style={{ rowGap: 2 }}>
             <Text style={styles.textGreet}>
-              Good {Timing}, <Text style={{fontFamily: "Syne-Bold"}}>{user}</Text>
+              Good {Timing},{" "}
+              <Text style={{ fontFamily: "Syne-Bold" }}>{user}</Text>
             </Text>
           </View>
           <View
@@ -131,15 +141,26 @@ export default function Page() {
               borderRadius: 50,
             }}
           >
-            <UserIcon width={25} height={25} />
+            <Link href="/auth/signup/page" asChild>
+              <Pressable>
+                <UserIcon width={25} height={25} />
+              </Pressable>
+            </Link>
           </View>
         </View>
-        <View style={{ marginBottom:15 }}>
+        <View style={{ marginBottom: 15 }}>
           <Text style={styles.textIntro}>Discover The {place}</Text>
         </View>
         {/* nav ended */}
         {/* cards stared */}
-        <Animated.View style={{ display: "flex", height: 290, justifyContent: "space-between", opacity: fadeAnim }}>
+        <Animated.View
+          style={{
+            display: "flex",
+            height: 290,
+            justifyContent: "space-between",
+            opacity: fadeAnim,
+          }}
+        >
           <View
             style={{
               display: "flex",
@@ -148,8 +169,13 @@ export default function Page() {
               gap: 5,
             }}
           >
-            <LgCard txt="Translate" color="#F7C84C" Icon={TranslateIcon} path="/translate/page"/>
-            <SmCard color="#5F6DF3" Icon={WeatherIcon} path="/weather/page"/>
+            <LgCard
+              txt="Translate"
+              color="#F7C84C"
+              Icon={TranslateIcon}
+              path="/translate/page"
+            />
+            <SmCard color="#5F6DF3" Icon={WeatherIcon} path="/weather/page" />
           </View>
           <View
             style={{
@@ -159,8 +185,17 @@ export default function Page() {
               gap: 5,
             }}
           >
-            <SmCard color="#FFFFFF" Icon={HospitalIcon} path="/hospitals/page"/>
-            <LgCard txt="Emergency" color="#FC5750" Icon={EmergencyIcon} path="/emergency/page"/>
+            <SmCard
+              color="#FFFFFF"
+              Icon={HospitalIcon}
+              path="/hospitals/page"
+            />
+            <LgCard
+              txt="Emergency"
+              color="#FC5750"
+              Icon={EmergencyIcon}
+              path="/emergency/page"
+            />
           </View>
           <View
             style={{
@@ -170,8 +205,13 @@ export default function Page() {
               gap: 5,
             }}
           >
-            <LgCard txt="Explore" color="#8AE990" Icon={ExploreIcon} path="/explore/page"/>
-            <SmCard color="#FFFFFF" Icon={BookingIcon} path="/booking/page"/>
+            <LgCard
+              txt="Explore"
+              color="#8AE990"
+              Icon={ExploreIcon}
+              path="/explore/page"
+            />
+            <SmCard color="#FFFFFF" Icon={BookingIcon} path="/booking/page" />
           </View>
         </Animated.View>
         {/* cards ended */}
@@ -184,3 +224,5 @@ export default function Page() {
     </SafeAreaView>
   );
 }
+
+export default Page;
