@@ -2,20 +2,20 @@ import React from "react";
 import { Stack } from "expo-router";
 import { DarkTheme, ThemeProvider } from "@react-navigation/native";
 import { ClerkProvider } from "@clerk/clerk-expo";
-import { Text } from "react-native";
+import { CLERK_PUBLISHABLE_KEY } from "@env";
 
 const _layout = () => {
-  const CLERK_PUBLISHABLE_KEY = "pk_test_Y2VudHJhbC1zaGVlcGRvZy03My5jbGVyay5hY2NvdW50cy5kZXYk";
+  const CLERK_KEY = CLERK_PUBLISHABLE_KEY;
   return (
     <ThemeProvider value={DarkTheme}>
-      <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          statusBarAnimation: "fade",
-          animation: "fade_from_bottom",
-          autoHideHomeIndicator: true,
-        }}
+      <ClerkProvider publishableKey={CLERK_KEY}>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            statusBarAnimation: "fade",
+            animation: "fade_from_bottom",
+            autoHideHomeIndicator: true,
+          }}
         />
         {/* <Text style={{color: "#000"}}>{CLERK_PUBLISHABLE_KEY} OK</Text> */}
       </ClerkProvider>
