@@ -1,5 +1,5 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
 const SvgComponent = () => (
   <Svg
     width={28}
@@ -18,5 +18,5 @@ const SvgComponent = () => (
       fill="#F7C84C"
     />
   </Svg>
-)
-export { SvgComponent as BackIcon }
+);
+export { SvgComponent as BackIcon };
