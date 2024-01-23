@@ -67,6 +67,26 @@ We appreciate your interest and support for YatraZen! Here are a few ways you ca
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ru-dr/v3&type=Timeline)](https://star-history.com/#ru-dr/v3&Timeline)
 
+## ⚠️ Copyright Notice ⚠️
+
+© [2023] YatraZen. All rights reserved. The content, design, and features presented in this overview are the intellectual property of YatraZen and its creators. Any unauthorized reproduction, distribution, or copying of the content, in whole or in part, without explicit written permission from YatraZen, is strictly prohibited.
+
+## 🚫 Prohibited Actions 🚫
+
+Copying and distributing this content without the owner's permission is strictly prohibited. Any attempt to reproduce, modify, or share YatraZen's materials for commercial or non-commercial purposes without proper authorization will result in legal action.
+
+## 💼 Intellectual Property Rights 💼
+
+YatraZen holds exclusive intellectual property rights to the technology stack, design elements, and features mentioned in this overview. Unauthorized use or reproduction may lead to civil and criminal penalties.
+
+## 📧 Contact Us 📧
+
+To request permission for use, report infringement, or seek clarification, please contact us at [rudr26@proton.me](mailto:rudr26@proton.me). We appreciate your cooperation and respect for our intellectual property.
+
+Thank you for understanding and respecting our creative work.
+
+#YatraZen #CopyrightProtection #IntellectualProperty
+
 ---
 
 Thank you for being a part of our journey!
