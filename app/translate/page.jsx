@@ -17,7 +17,6 @@ const languageOptions = [
   { key: "en", value: "English" },
   { key: "es", value: "Spanish" },
   { key: "fr", value: "French" },
-  // add indian languages first
   { key: "hi", value: "Hindi" },
   { key: "bn", value: "Bengali" },
   { key: "te", value: "Telugu" },
