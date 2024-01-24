@@ -12,6 +12,7 @@ import { StatusBar } from "expo-status-bar";
 import BackNav from "../components/BackNav";
 import { SelectList } from "react-native-dropdown-select-list";
 import axios from "axios";
+import { SwapIcon } from "../components/icons/SwapIcon";
 
 const languageOptions = [
   { key: "en", value: "English" },
@@ -175,9 +176,12 @@ const Translate = () => {
         <BackNav path={"/"} />
         <View
           style={{
-            marginTop: 20,
+            marginHorizontal: 20,
+            marginVertical: 10,
+            display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
           <SelectList
@@ -190,7 +194,9 @@ const Translate = () => {
             data={languageOptions}
             save="key"
             placeholder="From"
+            
           />
+          <SwapIcon />
           <SelectList
             boxStyles={{ backgroundColor: "#fff", width: 150 }}
             itemStyle={{ backgroundColor: "#fff" }}
