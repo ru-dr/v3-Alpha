@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image, TouchableOpacity, Linking, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  Linking,
+  ScrollView,
+} from "react-native";
 import axios from "axios";
 
 const truncateWords = (text, numWords) => {
@@ -15,7 +22,6 @@ const truncateWords = (text, numWords) => {
   return text;
 };
 
-
 const NewsCard = () => {
   const [news, setNews] = useState([]);
 
@@ -23,23 +29,28 @@ const NewsCard = () => {
     fetchNews();
   }, []);
 
-
-//   other api provider with 48 hrs latest news ( newsdata.io )
   const fetchNews = async () => {
     try {
-      const apiKey = "pub_30952e678e7e6e656b0bae237e8846ce63a9b";
-      const apiUrl = "https://newsdata.io/api/1/news";
-      const queryString = "travel safety";
-      const language = "en";
-      const category = "tourism,world";
-
       const options = {
         method: "GET",
-        url: `${apiUrl}?apikey=${apiKey}&q=${encodeURIComponent(queryString)}&language=${language}&category=${encodeURIComponent(category)}`,
+        url: "https://api.newscatcherapi.com/v2/search?",
+        params: {
+          q: "travel safety OR weather OR covid OR tourism",
+          lang: "en",
+          sort_by: "relevancy",
+          page: "1",
+          // add trusted sources ( international only ) here
+          sources: ("bbc.co.uk", "cnn.com", "nytimes.com", "washingtonpost.com")
+        },
+        headers: {
+          "x-api-key": "KNYKNyVwCPOB-hdJPcNtPTwhL8UD9ZX2zv1d5ov2M30",
+        },
       };
 
       const response = await axios.request(options);
-      const articles = response.data.results.slice(0, 10);
+      // console.log(response.data); // Add this line
+
+      const articles = response.data.articles.slice(0, 10);
       setNews(articles);
     } catch (error) {
       console.error(error);
@@ -60,10 +71,10 @@ const NewsCard = () => {
         <TouchableOpacity key={index} onPress={() => handlePress(article.link)}>
           <View style={{ flexDirection: "row", marginVertical: 10 }}>
             <View style={{ marginRight: 10 }}>
-              {article.image_url ? (
+              {article.media ? (
                 <Image
                   style={{ width: 140, height: 100, borderRadius: 10 }}
-                  source={{ uri: article.image_url }}
+                  source={{ uri: article.media }}
                 />
               ) : (
                 <Image
@@ -74,7 +85,9 @@ const NewsCard = () => {
                 />
               )}
             </View>
-            <View style={{ flex: 1, justifyContent: "space-between", rowGap: 10 }}>
+            <View
+              style={{ flex: 1, justifyContent: "space-between", rowGap: 0 }}
+            >
               <Text
                 style={{
                   color: "#fff",
@@ -82,7 +95,7 @@ const NewsCard = () => {
                   width: "100%",
                   fontFamily: "Inter-SemiBold",
                 }}
-                numberOfLines={2}
+                numberOfLines={3}
               >
                 {truncateWords(article.title, 10)}
               </Text>
@@ -93,8 +106,10 @@ const NewsCard = () => {
                   width: "100%",
                   fontFamily: "Inter-Light",
                 }}
+                numberOfLines={2}
+                lineBreakMode="clip"
               >
-                {truncateWords(article.description, 15)}
+                {truncateWords(article.summary, 11)}
               </Text>
             </View>
           </View>
