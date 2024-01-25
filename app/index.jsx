@@ -141,7 +141,7 @@ const Page = () => {
               borderRadius: 50,
             }}
           >
-            <Link href="/auth/signup/page" asChild>
+            <Link href="/auth/profile/page" asChild>
               <Pressable>
                 <UserIcon width={25} height={25} />
               </Pressable>
