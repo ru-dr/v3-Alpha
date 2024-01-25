@@ -1,4 +1,11 @@
-import { View, Text, Dimensions, StyleSheet, Animated, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  Dimensions,
+  StyleSheet,
+  Animated,
+  Pressable,
+} from "react-native";
 import React, { useEffect, useRef } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -223,6 +230,6 @@ const Page = () => {
       </View>
     </SafeAreaView>
   );
-}
+};
 
 export default Page;
