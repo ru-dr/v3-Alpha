@@ -4,7 +4,7 @@
  * <p>This source code is licensed under the MIT license found in the LICENSE file in the root
  * directory of this source tree.
  */
-package com.t0p_g.yatarazenv3;
+package com.v3.yatarazen;
 
 import android.content.Context;
 import com.facebook.react.ReactInstanceManager;

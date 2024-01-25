@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.t0p_g.yatarazenv3'
+    namespace 'com.v3.yatarazen'
     defaultConfig {
-        applicationId 'com.t0p_g.yatarazenv3'
+        applicationId 'com.v3.yatarazen'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

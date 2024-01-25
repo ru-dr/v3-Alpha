@@ -1,4 +1,4 @@
-package com.t0p_g.yatarazenv3;
+package com.v3.yatarazen;
 
 import android.os.Build;
 import android.os.Bundle;
