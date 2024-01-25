@@ -227,6 +227,7 @@ const Page = () => {
           <News />
         </View>
         {/* news ended */}
+        
       </View>
     </SafeAreaView>
   );
