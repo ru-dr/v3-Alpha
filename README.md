@@ -37,9 +37,9 @@ Promote hospitality with the ethos of "Athithi Devo Bhava."
 - **React Native (for iOS/Android)**
 - **Expo CLI (Android and iOS SDKs)**
 - **NextJS 13.5 (for Web app)**
-- **Supabase (database)**
+- **MongoDB / Supabase (database)**
 - **Axios and Express (API Endpoints)**
-- **Clerk Authentication (Secure Auth)**
+- **OAuth ( Google ,Clerk etc. ) (Secure Auth)**
 
 ## Screenshots
 
