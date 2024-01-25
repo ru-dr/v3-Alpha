@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "yatarazen-v3",
-    "slug": "yatarazen-v3",
+    "name": "v3",
+    "slug": "v3",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -23,7 +23,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.t0p_g.yatarazenv3"
+      "package": "com.v3.yatarazen"
     },
     "web": {
       "bundler": "metro",
