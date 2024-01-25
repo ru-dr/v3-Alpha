@@ -10,10 +10,9 @@ import { Link } from "expo-router";
 import { BackIcon } from "./icons/BackIcon";
 import { usePathname } from "expo-router";
 
-
-const BackNav = ({ path }) => {
+const BackNav = ({ path, titleName }) => {
   const pathname = usePathname();
-  const title = pathname.split("/")[1];
+  const title = titleName || pathname.split("/")[1];
 
   return (
     <View
@@ -33,7 +32,9 @@ const BackNav = ({ path }) => {
           </Pressable>
         </Link>
       </TouchableOpacity>
-      <Text style={{ color: "#fff", fontFamily: "Syne-Bold", fontSize: 20}}>{title}</Text>
+      <Text style={{ color: "#fff", fontFamily: "Syne-Bold", fontSize: 20 }}>
+        {title}
+      </Text>
     </View>
   );
 };

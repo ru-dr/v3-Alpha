@@ -40,7 +40,7 @@ const NewsCard = () => {
           sort_by: "relevancy",
           page: "1",
           // add trusted sources ( international only ) here
-          sources: ("bbc.co.uk", "cnn.com", "nytimes.com", "washingtonpost.com")
+          // sources: ("bbc.co.uk", "cnn.com", "nytimes.com", "washingtonpost.com")
         },
         headers: {
           "x-api-key": "KNYKNyVwCPOB-hdJPcNtPTwhL8UD9ZX2zv1d5ov2M30",

@@ -17,16 +17,20 @@ const News = () => {
         >
           News
         </Text>
-        <Text style={{ fontFamily: "Inter-Light", color: "#fff" }}>
-          Top Headlines
-        </Text>
+        <View>
+          <Text style={{ fontFamily: "Inter-Light", color: "#fff" }}>
+            Top Headlines
+          </Text>
+          {/* add a refresh news button that shows next news */}
+
+        </View>
       </View>
       <View style={{ borderRadius: 20 }}></View>
       <ScrollView style={{ marginTop: 2 }}>
         <NewsCardv2 />
         {/* The below code inserts a blank card */}
         <View
-          style={{ height: 50, width: 100, backgroundColor: "white" }}
+          style={{ height: 50, width: 100, backgroundColor: "white", marginBottom: 10 }}
         ></View>
       </ScrollView>
     </View>
