@@ -1,34 +1,32 @@
-import { View, Text, Dimensions } from "react-native";
+import {
+  Text,
+  Dimensions,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import BackNav from "../../components/BackNav";
 import { useEffect, useState } from "react";
-import { StyleSheet, Button, Image } from "react-native";
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useNavigation } from "expo-router";
 
 WebBrowser.maybeCompleteAuthSession();
 
 const page = () => {
-  const [token, setToken] = useState("");
   const [userInfo, setUserInfo] = useState(null);
-  const navigation = useNavigation();
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId:
       "298038507775-q9kodv8e1nsc9ldqdg0m03ajg9fl3dqb.apps.googleusercontent.com",
-    // iosClientId: "",
-    // webClientId: "",
   });
-
-  // get default redirect url
-  
 
   useEffect(() => {
     handleEffect();
-  }, [response, token]);
+  }, [response]);
 
   async function handleEffect() {
     const user = await getLocalUser();
@@ -69,6 +67,7 @@ const page = () => {
 
   const removeLocalUser = async () => {
     await AsyncStorage.removeItem("@user");
+    setUserInfo(null);
   };
 
   const screenHeight = Dimensions.get("window").height;
@@ -79,13 +78,14 @@ const page = () => {
         <BackNav path={"/"} />
         <View style={styles.container}>
           {!userInfo ? (
-            <Button
-              title="Sign in with Google"
+            <TouchableOpacity
               disabled={!request}
               onPress={() => {
                 promptAsync();
               }}
-            />
+            >
+              <Text style={styles.btn}>Login with Google</Text>
+            </TouchableOpacity>
           ) : (
             <View style={styles.card}>
               {userInfo?.picture && (
@@ -99,10 +99,11 @@ const page = () => {
                 Verified: {userInfo.verified_email ? "yes" : "no"}
               </Text>
               <Text style={styles.text}>Name: {userInfo.name}</Text>
-              {/* <Text style={styles.text}>{JSON.stringify(userInfo, null, 2)}</Text> */}
+              <TouchableOpacity onPress={removeLocalUser}>
+                <Text style={styles.btn}>Log out</Text>
+              </TouchableOpacity>
             </View>
           )}
-          <Button title="remove local store" onPress={removeLocalUser()} />
         </View>
       </View>
     </SafeAreaView>
@@ -116,14 +117,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor:"#000"
+    backgroundColor: "#000", // Set main background color
   },
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#1a1a1a", // Darker shade for card
     padding: 20,
     borderRadius: 20,
-    width: "90%",
     alignItems: "center",
+    justifyContent: "center",
+    width: "80%",
   },
   image: {
     width: 100,
@@ -134,5 +136,19 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     marginBottom: 10,
+    color: "#fff", // Set text color to white
+  },
+  btn: {
+    backgroundColor: "#fff",
+    color: "#000",
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+  },
+  centeredView: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
   },
 });
