@@ -21,7 +21,7 @@ const page = () => {
   const [userInfo, setUserInfo] = useState(null);
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId:
-      "298038507775-q9kodv8e1nsc9ldqdg0m03ajg9fl3dqb.apps.googleusercontent.com",
+      "298038507775-035pg828ia1sr9paidn2o63kn5eq4ocv.apps.googleusercontent.com",
   });
 
   useEffect(() => {

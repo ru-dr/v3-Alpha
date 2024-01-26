@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import {
   View,
   Text,
@@ -6,72 +7,38 @@ import {
   Animated,
   Pressable,
 } from "react-native";
-import React, { useEffect, useRef } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
-import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { UserIcon } from "./components/icons/UserIcon";
 import { EmergencyIcon } from "./components/icons/EmergencyIcon";
 import LgCard from "./components/LgCard";
 import SmCard from "./components/SmCard";
-import News from "./components/News";
 import { ExploreIcon } from "./components/icons/ExploreIcon";
 import { WeatherIcon } from "./components/icons/WeatherIcon";
 import { TranslateIcon } from "./components/icons/TranslateIcon";
 import { BookingIcon } from "./components/icons/BookingIcon";
 import { HospitalIcon } from "./components/icons/HospitalIcon";
-import { useColorScheme } from "react-native";
 import { Link } from "expo-router";
+import { getLocalUser } from "./utils/storage";
+import News from "./components/News";
 
 const screenHeight = Dimensions.get("window").height;
-const place = "India";
-const date = new Date();
-const hours = date.getHours();
-let Timing = "";
-if (hours < 12) {
-  Timing = "Morning";
-} else if (hours >= 12 && hours < 17) {
-  Timing = "Afternoon";
-} else if (hours >= 17 && hours < 19) {
-  Timing = "Evening";
-} else {
-  Timing = "Night";
-}
-
-const user = "John doe";
-
-SplashScreen.preventAutoHideAsync();
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-  },
-  textIntro: {
-    color: "#fff",
-    fontSize: 25,
-    fontFamily: "Syne-Bold",
-    // fontWeight: "bold"
-  },
-  main: {
-    flex: 1,
-    display: "flex",
-    height: screenHeight,
-    marginHorizontal: 20,
-    marginVertical: 10,
-  },
-  textGreet: {
-    color: "#fff",
-    fontSize: 20,
-    fontFamily: "Inter-Regular",
-  },
-});
 
 const Page = () => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const colorScheme = useColorScheme();
+
+  const [userName, setUserName] = useState("");
+
+  // read from local storage
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await getLocalUser();
+      if (user) setUserName(user.name);
+    };
+    fetchUser();
+  }, []);
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -80,6 +47,52 @@ const Page = () => {
       useNativeDriver: true,
     }).start();
   }, [fadeAnim]);
+
+  const place = "India";
+  const date = new Date();
+  const hours = date.getHours();
+  let Timing = "";
+  if (hours < 12) {
+    Timing = "Morning";
+  } else if (hours >= 12 && hours < 17) {
+    Timing = "Afternoon";
+  } else if (hours >= 17 && hours < 19) {
+    Timing = "Evening";
+  } else {
+    Timing = "Night";
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: "#000",
+    },
+    textIntro: {
+      color: "#fff",
+      fontSize: 25,
+      fontFamily: "Syne-Bold",
+    },
+    main: {
+      flex: 1,
+      display: "flex",
+      height: screenHeight,
+      marginHorizontal: 20,
+      marginVertical: 10,
+    },
+    textGreet: {
+      color: "#fff",
+      fontSize: 20,
+      fontFamily: "Inter-Regular",
+    },
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    try {
+      await SplashScreen.hideAsync();
+    } catch (error) {
+      console.error("Error hiding splash screen:", error);
+    }
+  }, []);
 
   const [fontsLoaded, fontError] = useFonts({
     "Inter-Black": require("./components/fonts/Inter-Black.ttf"),
@@ -109,24 +122,16 @@ const Page = () => {
     "Barlow-Thin": require("./components/fonts/Barlow-Thin.ttf"),
   });
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded || fontError) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontError]);
-
   if (!fontsLoaded && !fontError) {
     return null;
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
       <StatusBar style="light" backgroundColor="#000" />
       <View style={styles.main}>
-        {/* nav started */}
         <View
           style={{
-            display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
@@ -135,7 +140,7 @@ const Page = () => {
           <View style={{ rowGap: 2 }}>
             <Text style={styles.textGreet}>
               Good {Timing},{" "}
-              <Text style={{ fontFamily: "Syne-Bold" }}>{user}</Text>
+              <Text style={{ fontFamily: "Syne-Bold" }}>{userName}</Text>
             </Text>
           </View>
           <View
@@ -158,11 +163,8 @@ const Page = () => {
         <View style={{ marginBottom: 15 }}>
           <Text style={styles.textIntro}>Discover The {place}</Text>
         </View>
-        {/* nav ended */}
-        {/* cards stared */}
         <Animated.View
           style={{
-            display: "flex",
             height: 290,
             justifyContent: "space-between",
             opacity: fadeAnim,
@@ -170,7 +172,6 @@ const Page = () => {
         >
           <View
             style={{
-              display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               gap: 5,
@@ -186,7 +187,6 @@ const Page = () => {
           </View>
           <View
             style={{
-              display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               gap: 5,
@@ -206,7 +206,6 @@ const Page = () => {
           </View>
           <View
             style={{
-              display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               gap: 5,
@@ -221,13 +220,11 @@ const Page = () => {
             <SmCard color="#FFFFFF" Icon={BookingIcon} path="/booking/page" />
           </View>
         </Animated.View>
-        {/* cards ended */}
         {/* news started */}
         <View>
           <News />
         </View>
         {/* news ended */}
-        
       </View>
     </SafeAreaView>
   );
