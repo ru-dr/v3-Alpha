@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, ScrollView } from "react-native";
-import NewsCardv2 from "./NewsCardv2";
+import NewsCard from "./NewsCard";
 
 const News = () => {
   return (
@@ -27,7 +27,7 @@ const News = () => {
       </View>
       <View style={{ borderRadius: 20 }}></View>
       <ScrollView style={{ marginTop: 2 }}>
-        <NewsCardv2 />
+        <NewsCard />
         {/* The below code inserts a blank card */}
         <View
           style={{ height: 50, width: 100, backgroundColor: "white", marginBottom: 10 }}
