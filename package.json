@@ -39,7 +39,8 @@
     "react-native-screens": "~3.22.0",
     "react-native-svg": "13.9.0",
     "react-native-web": "~0.19.6",
-    "updates": "^15.1.1"
+    "updates": "^15.1.1",
+    "react-native-maps": "1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
