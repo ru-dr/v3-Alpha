@@ -21,7 +21,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "googleMapsApiKey": "AIzaSyA3wfl35CzCuXjk1wCkz64hZawNYyWjHDg"
       },
       "package": "com.v3.yatrazen"
     },
