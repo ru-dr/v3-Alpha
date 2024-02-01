@@ -32,6 +32,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Yatrazen to use your location."
+        }
+      ],
       "expo-router"
     ],
     "experiments": {
