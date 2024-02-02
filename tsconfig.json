@@ -9,6 +9,6 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "**/*.js"
-  ]
+, "app/context/UserLocationContext.jsx"  ]
 }
 
