@@ -12,9 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -23,7 +21,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.v3.yatrazen"
+      "package": "com.v3.yatrazen",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD3"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
