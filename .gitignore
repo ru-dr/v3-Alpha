@@ -42,5 +42,5 @@ expo-env.d.ts
 .vscode/settings.json
 android/gradlew
 
-dump
-android
+dump/
+android/

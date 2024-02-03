@@ -2,7 +2,7 @@
   "expo": {
     "name": "v3",
     "slug": "v3",
-    "version": "1.0.0",
+    "version": "3.0.5a",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
