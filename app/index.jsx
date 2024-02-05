@@ -95,31 +95,8 @@ const Page = () => {
   }, []);
 
   const [fontsLoaded, fontError] = useFonts({
-    "Inter-Black": require("./components/fonts/Inter-Black.ttf"),
-    "Inter-Bold": require("./components/fonts/Inter-Bold.ttf"),
-    "Inter-Regular": require("./components/fonts/Inter-Regular.ttf"),
-    "Inter-SemiBold": require("./components/fonts/Inter-SemiBold.ttf"),
-    "Inter-ExtraBold": require("./components/fonts/Inter-ExtraBold.ttf"),
-    "Inter-ExtraLight": require("./components/fonts/Inter-ExtraLight.ttf"),
-    "Inter-Light": require("./components/fonts/Inter-Light.ttf"),
-    "Inter-Medium": require("./components/fonts/Inter-Medium.ttf"),
-    "Inter-Thin": require("./components/fonts/Inter-Thin.ttf"),
-    "Inter-Variable": require("./components/fonts/Inter-Variable.ttf"),
-    "Syne-Bold": require("./components/fonts/Syne-Bold.ttf"),
-    "Syne-ExtraBold": require("./components/fonts/Syne-ExtraBold.ttf"),
-    "Syne-Regular": require("./components/fonts/Syne-Regular.ttf"),
-    "Syne-SemiBold": require("./components/fonts/Syne-SemiBold.ttf"),
-    "Syne-Variable": require("./components/fonts/Syne-VariableFont_wght.ttf"),
-    "Syne-Medium": require("./components/fonts/Syne-Medium.ttf"),
-    "Barlow-Black": require("./components/fonts/Barlow-Black.ttf"),
-    "Barlow-Bold": require("./components/fonts/Barlow-Bold.ttf"),
-    "Barlow-ExtraBold": require("./components/fonts/Barlow-ExtraBold.ttf"),
-    "Barlow-ExtraLight": require("./components/fonts/Barlow-ExtraLight.ttf"),
-    "Barlow-Light": require("./components/fonts/Barlow-Light.ttf"),
-    "Barlow-Medium": require("./components/fonts/Barlow-Medium.ttf"),
-    "Barlow-Regular": require("./components/fonts/Barlow-Regular.ttf"),
-    "Barlow-SemiBold": require("./components/fonts/Barlow-SemiBold.ttf"),
-    "Barlow-Thin": require("./components/fonts/Barlow-Thin.ttf"),
+    "Inter-Regular": require("../assets/fonts/Inter-Regular.ttf"),
+    "Syne-Bold": require("../assets/fonts/Syne-Bold.ttf"),
   });
 
   if (!fontsLoaded && !fontError) {
