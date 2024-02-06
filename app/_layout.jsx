@@ -31,14 +31,77 @@ const StackLayout = () => {
   return (
     <ThemeProvider value={DarkTheme}>
       <UserLocationContext.Provider value={{ location, setLocation }}>
-        <Stack options={{headerShown: false}}>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="booking/index" options={{headerShown: false}}/>
-          <Stack.Screen name="weather/index" options={{headerShown: false}}/>
-          <Stack.Screen name="hospitals/index" options={{headerShown: false}}/>
-          <Stack.Screen name="auth/login/index" options={{headerShown: false}}/>
-          <Stack.Screen name="auth/profile/index" options={{headerShown: false}}/>
-          <Stack.Screen name="oauthredirect" options={{headerShown: false}}/>
+        <Stack
+          screenOptions={{
+            statusBarAnimation: "fade",
+            animation: "fade_from_bottom",
+            autoHideHomeIndicator: true,
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen
+            name="(tabs)"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="booking/index"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="weather/index"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="hospitals/index"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="auth/login/index"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="auth/profile/index"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="oauthredirect"
+            screenOptions={{
+              statusBarAnimation: "fade",
+              animation: "fade_from_bottom",
+              autoHideHomeIndicator: true,
+              headerShown: false,
+            }}
+          />
         </Stack>
       </UserLocationContext.Provider>
     </ThemeProvider>

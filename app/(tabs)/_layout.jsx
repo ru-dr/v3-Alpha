@@ -3,7 +3,9 @@ import { Entypo } from "@expo/vector-icons";
 
 export default () => {
   return (
-    <Tabs options={{ headerShown: false }}>
+    <Tabs options={{ headerShown: false }} screenOptions={{
+      headerShown: false,
+    }}>
       <Tabs.Screen
         name="home"
         options={{
