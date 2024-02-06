@@ -194,7 +194,6 @@ const Translate = () => {
             data={languageOptions}
             save="key"
             placeholder="From"
-            
           />
           <SwapIcon />
           <SelectList
@@ -217,20 +216,59 @@ const Translate = () => {
               padding: 10,
               borderRadius: 10,
               color: "#fff",
+              height: 200,
             }}
             placeholder="Enter text to translate"
+            placeholderTextColor={"#fff"}
+            multiline={true}
+            textAlignVertical={"top"}
+            textAlign={"left"}
             onChangeText={(text) => setInputText(text)}
             value={inputText}
           />
-          <Button
-            title="Translate"
-            onPress={translateText}
-            disabled={loading}
-          />
+          <View
+            style={{
+              marginTop: 10,
+              backgroundColor: "#fcba03",
+              borderRadius: 10,
+              padding: 10,
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              borderWidth: 1,
+              borderColor: "#ffff",
+            }}
+          >
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: 16,
+                fontFamily: "Syne-Bold",
+              }}
+              onPress={translateText}
+            >
+              Translate
+            </Text>
+          </View>
           {loading ? <ActivityIndicator size="large" color="#00ff00" /> : null}
-          <Text style={{ marginTop: 10, fontSize: 16, color: "#ffff" }}>
-            Translated Text: {outputText}
-          </Text>
+          <TextInput
+            style={{
+              borderWidth: 1,
+              borderColor: "#ffff",
+              padding: 10,
+              borderRadius: 10,
+              color: "#fff",
+              height: 200,
+              marginVertical: 10,
+              textAlignVertical: "top",
+              textAlign: "left"
+            }}
+            value={outputText}
+            placeholder="Translated text"
+            placeholderTextColor={"#fff"}
+            multiline={true}
+            editable={false}
+          />
           {error ? <Text style={{ color: "red" }}>{error}</Text> : null}
         </View>
       </View>
