@@ -4,8 +4,9 @@ import {
   Text,
   Dimensions,
   TextInput,
-  Button,
+  Pressable,
   ActivityIndicator,
+  TouchableOpacity,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -226,30 +227,34 @@ const Translate = () => {
             onChangeText={(text) => setInputText(text)}
             value={inputText}
           />
-          <View
-            style={{
-              marginTop: 10,
-              backgroundColor: "#fcba03",
-              borderRadius: 10,
-              padding: 10,
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              borderWidth: 1,
-              borderColor: "#ffff",
-            }}
-          >
-            <Text
+          <Pressable onPress={translateText}>
+            <View
               style={{
+                marginTop: 10,
+                backgroundColor: "#fcba03",
+                borderRadius: 10,
+                padding: 10,
+                alignItems: "center",
+                justifyContent: "center",
                 color: "#fff",
-                fontSize: 16,
-                fontFamily: "Syne-Bold",
+                borderWidth: 1,
+                borderColor: "#ffff",
               }}
-              onPress={translateText}
             >
-              Translate
-            </Text>
-          </View>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: "#fff",
+                    fontSize: 16,
+                    fontFamily: "Syne-Bold",
+                  }}
+                  onPress={translateText}
+                >
+                  Translate
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </Pressable>
           {loading ? <ActivityIndicator size="large" color="#00ff00" /> : null}
           <TextInput
             style={{
@@ -261,7 +266,7 @@ const Translate = () => {
               height: 200,
               marginVertical: 10,
               textAlignVertical: "top",
-              textAlign: "left"
+              textAlign: "left",
             }}
             value={outputText}
             placeholder="Translated text"
