@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import BackNav from "../components/BackNav";
+import BackNav from "../../components/BackNav";
 import { SelectList } from "react-native-dropdown-select-list";
 import axios from "axios";
-import { SwapIcon } from "../components/icons/SwapIcon";
+import { SwapIcon } from "../../components/icons/SwapIcon";
 
 const languageOptions = [
   { key: "en", value: "English" },
@@ -173,7 +173,7 @@ const Translate = () => {
     <SafeAreaView>
       <StatusBar style="light" backgroundColor="#000" />
       <View style={{ backgroundColor: "#000", height: screenHeight }}>
-        <BackNav path={"/"} />
+        <BackNav path={"/home"} />
         <View
           style={{
             marginHorizontal: 20,
