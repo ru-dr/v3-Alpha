@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Linking, Platform, Dimensions, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import BackNav from "../components/BackNav";
-import { UserLocationContext } from "../context/UserLocationContext";
+import BackNav from "../../components/BackNav";
+import { UserLocationContext } from "../../context/UserLocationContext";
 
 export default function App() {
   const { location } = useContext(UserLocationContext);
@@ -57,7 +57,7 @@ export default function App() {
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="light" backgroundColor="#000" />
       <View style={{ backgroundColor: "#000" }}>
-        <BackNav path={"/"} />
+        <BackNav path={"/home"} />
       </View>
       {loading ? (
         <ActivityIndicator size="large" color="#0000ff" />

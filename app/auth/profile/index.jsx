@@ -13,13 +13,13 @@ const page = () => {
     <SafeAreaView>
       <StatusBar style="light" backgroundColor="#000" />
       <View style={{ backgroundColor: "#000", height: screenHeight }}>
-        <BackNav path={"/"} titleName={"Profile"} />
+        <BackNav path={"/home"} titleName={"Profile"} />
 
         {/* write from here */}
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Link href={"../login/page"} asChild>
+          <Link href={"/auth/login"} asChild>
             <Pressable>
               <Text style={styles.btn}>Google Auth</Text>
             </Pressable>

@@ -2,9 +2,9 @@ import { View, Text, Dimensions, Image } from "react-native";
 import React, { useContext } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import BackNav from "../components/BackNav";
+import BackNav from "../../components/BackNav";
 import MapView from "react-native-maps";
-import { UserLocationContext } from "../context/UserLocationContext";
+import { UserLocationContext } from "../../context/UserLocationContext";
 import { Marker } from "react-native-maps";
 import MapStyle from "./MapStyle.json";
 
@@ -18,7 +18,7 @@ const page = () => {
       <SafeAreaView>
         <StatusBar style="light" backgroundColor="#000" />
         <View style={{ backgroundColor: "#000", height: screenHeight }}>
-          <BackNav path={"/"} />
+          <BackNav path={"/home"} />
           <View>
           
             <MapView
@@ -38,7 +38,7 @@ const page = () => {
                 }}
               >
                 <Image
-                  source={require("../../assets/images/marker.png")}
+                  source={require("../../../assets/images/marker.png")}
                   style={{ width: 30, height: 30 }}
                 />
               </Marker>
