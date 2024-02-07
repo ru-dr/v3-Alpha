@@ -3,17 +3,17 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import BackNav from "../components/BackNav";
-
+import { BlurView } from "@react-native-community/blur";
 
 const page = () => {
   // get current route path
-  
-  const screenHeight = Dimensions.get('window').height;
+
+  const screenHeight = Dimensions.get("window").height;
   return (
-    <SafeAreaView >
-      <StatusBar style="light" backgroundColor="#000"/>
-      <View style={{backgroundColor: '#000', height: screenHeight}}>
-        <BackNav path={'/home'}/>
+    <SafeAreaView>
+      <StatusBar style="light" backgroundColor="#000" />
+      <View style={{ backgroundColor: "#000", height: screenHeight }}>
+        <BackNav path={"/home"} />
       </View>
     </SafeAreaView>
   );

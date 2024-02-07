@@ -34,7 +34,7 @@ const StackLayout = () => {
         <Stack
           screenOptions={{
             statusBarAnimation: "fade",
-            animation: "fade_from_bottom",
+            animation: "none",
             animationTypeForReplace: "push",
             autoHideHomeIndicator: true,
             headerShown: false,
