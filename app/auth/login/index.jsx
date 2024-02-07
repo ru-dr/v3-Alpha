@@ -14,6 +14,12 @@ import { useEffect, useState } from "react";
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Animated, {
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+  Easing,
+} from "react-native-reanimated";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -22,6 +28,24 @@ const page = () => {
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId:
       "298038507775-035pg828ia1sr9paidn2o63kn5eq4ocv.apps.googleusercontent.com",
+  });
+
+  const opacityAnim = useSharedValue(0);
+  const translateYAnim = useSharedValue(300); // start from 100 pixels below
+
+  useEffect(() => {
+    opacityAnim.value = withTiming(1, { duration: 1500 });
+    translateYAnim.value = withTiming(0, {
+      duration: 500,
+      easing: Easing.out(Easing.exp),
+    });
+  }, [opacityAnim, translateYAnim]);
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      opacity: opacityAnim.value,
+      transform: [{ translateY: translateYAnim.value }],
+    };
   });
 
   useEffect(() => {
@@ -76,7 +100,17 @@ const page = () => {
       <StatusBar style="light" backgroundColor="#000" />
       <View style={{ backgroundColor: "#000", height: screenHeight }}>
         <BackNav path={"/home"} />
-        <View style={styles.container}>
+        <Animated.View
+          style={[
+            {
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#000",
+            },
+            animatedStyles,
+          ]}
+        >
           {!userInfo ? (
             <TouchableOpacity
               disabled={!request}
@@ -104,7 +138,7 @@ const page = () => {
               </TouchableOpacity>
             </View>
           )}
-        </View>
+        </Animated.View>
       </View>
     </SafeAreaView>
   );
