@@ -11,7 +11,7 @@ export default function OAuthRedirect() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldRedirect(true);
-    }, 50000);
+    }, 2000);
 
     // Fetch user data from AsyncStorage
     const fetchUser = async () => {
