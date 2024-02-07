@@ -35,6 +35,7 @@ const StackLayout = () => {
           screenOptions={{
             statusBarAnimation: "fade",
             animation: "fade_from_bottom",
+            animationTypeForReplace: "push",
             autoHideHomeIndicator: true,
             headerShown: false,
           }}
@@ -42,63 +43,42 @@ const StackLayout = () => {
           <Stack.Screen
             name="(tabs)"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="booking/index"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="weather/index"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="hospitals/index"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="auth/login/index"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="auth/profile/index"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="oauthredirect"
             screenOptions={{
-              statusBarAnimation: "fade",
-              animation: "fade_from_bottom",
-              autoHideHomeIndicator: true,
               headerShown: false,
             }}
           />

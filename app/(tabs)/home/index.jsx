@@ -1,12 +1,5 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import {
-  View,
-  Text,
-  Dimensions,
-  StyleSheet,
-  Animated,
-  Pressable,
-} from "react-native";
+import React, { useEffect, useState, useCallback } from "react";
+import { View, Text, Dimensions, StyleSheet, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
@@ -23,11 +16,33 @@ import { HospitalIcon } from "../../components/icons/HospitalIcon";
 import { Link } from "expo-router";
 import { getLocalUser } from "../../utils/storage";
 import News from "../../components/News";
+import Animated, {
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+  Easing,
+} from "react-native-reanimated";
 
 const screenHeight = Dimensions.get("window").height;
 
 const Page = () => {
-  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const opacityAnim = useSharedValue(0);
+  const translateYAnim = useSharedValue(300); // start from 100 pixels below
+
+  useEffect(() => {
+    opacityAnim.value = withTiming(1, { duration: 3000 });
+    translateYAnim.value = withTiming(0, {
+      duration: 2000,
+      easing: Easing.out(Easing.exp),
+    });
+  }, [opacityAnim, translateYAnim]);
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      opacity: opacityAnim.value,
+      transform: [{ translateY: translateYAnim.value }],
+    };
+  });
 
   const [userName, setUserName] = useState("");
 
@@ -39,14 +54,6 @@ const Page = () => {
     };
     fetchUser();
   }, []);
-
-  useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 2000,
-      useNativeDriver: true,
-    }).start();
-  }, [fadeAnim]);
 
   const place = "India";
   const date = new Date();
@@ -106,7 +113,18 @@ const Page = () => {
   return (
     <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
       <StatusBar style="light" backgroundColor="#000" />
-      <View style={styles.main}>
+      <Animated.View
+        style={[
+          {
+            flex: 1,
+            display: "flex",
+            height: screenHeight,
+            marginHorizontal: 20,
+            marginVertical: 10,
+          },
+          animatedStyles,
+        ]}
+      >
         <View
           style={{
             flexDirection: "row",
@@ -140,12 +158,13 @@ const Page = () => {
         <View style={{ marginBottom: 15 }}>
           <Text style={styles.textIntro}>Discover The {place}</Text>
         </View>
-        <Animated.View
-          style={{
-            height: 290,
-            justifyContent: "space-between",
-            opacity: fadeAnim,
-          }}
+        <View
+          style={[
+            {
+              height: 290,
+              justifyContent: "space-between",
+            },
+          ]}
         >
           <View
             style={{
@@ -169,11 +188,7 @@ const Page = () => {
               gap: 5,
             }}
           >
-            <SmCard
-              color="#FFFFFF"
-              Icon={HospitalIcon}
-              path="/hospitals"
-            />
+            <SmCard color="#FFFFFF" Icon={HospitalIcon} path="/hospitals" />
             <LgCard
               txt="Emergency"
               color="#FC5750"
@@ -196,13 +211,13 @@ const Page = () => {
             />
             <SmCard color="#FFFFFF" Icon={BookingIcon} path="/booking" />
           </View>
-        </Animated.View>
+        </View>
         {/* news started */}
         <View>
           <News />
         </View>
         {/* news ended */}
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 };
