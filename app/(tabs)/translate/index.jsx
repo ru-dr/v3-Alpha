@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -14,6 +14,12 @@ import BackNav from "../../components/BackNav";
 import { SelectList } from "react-native-dropdown-select-list";
 import axios from "axios";
 import { SwapIcon } from "../../components/icons/SwapIcon";
+import Animated, {
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+  Easing,
+} from "react-native-reanimated";
 
 const languageOptions = [
   { key: "en", value: "English" },
@@ -152,6 +158,24 @@ const Translate = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const opacityAnim = useSharedValue(0);
+  const translateYAnim = useSharedValue(300); // start from 100 pixels below
+
+  useEffect(() => {
+    opacityAnim.value = withTiming(1, { duration: 1500 });
+    translateYAnim.value = withTiming(0, {
+      duration: 500,
+      easing: Easing.out(Easing.exp),
+    });
+  }, [opacityAnim, translateYAnim]);
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      opacity: opacityAnim.value,
+      transform: [{ translateY: translateYAnim.value }],
+    };
+  });
+
   const translateText = async () => {
     setLoading(true);
     setError("");
@@ -173,7 +197,7 @@ const Translate = () => {
   return (
     <SafeAreaView>
       <StatusBar style="light" backgroundColor="#000" />
-      <View style={{ backgroundColor: "#000", height: screenHeight }}>
+      <Animated.View style={[{ backgroundColor: "#000", height: screenHeight }, animatedStyles]}>
         <BackNav path={"/home"} />
         <View
           style={{
@@ -276,7 +300,7 @@ const Translate = () => {
           />
           {error ? <Text style={{ color: "red" }}>{error}</Text> : null}
         </View>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 };

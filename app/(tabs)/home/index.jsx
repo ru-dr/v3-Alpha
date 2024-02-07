@@ -30,9 +30,9 @@ const Page = () => {
   const translateYAnim = useSharedValue(300); // start from 100 pixels below
 
   useEffect(() => {
-    opacityAnim.value = withTiming(1, { duration: 3000 });
+    opacityAnim.value = withTiming(1, { duration: 1500 });
     translateYAnim.value = withTiming(0, {
-      duration: 2000,
+      duration: 500,
       easing: Easing.out(Easing.exp),
     });
   }, [opacityAnim, translateYAnim]);
